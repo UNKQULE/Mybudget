@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Чеки</title>
+  <link rel="stylesheet" href="css/receipt.css">
+</head>
+<body>
+
+<header>
+  <a href="index.html" class="logo">
+    <img src="image/logo.png" alt="Логотип Мой Бюджет">
+  </a>
+  <h1 class="header-title">Чеки</h1>
+</header>
+
+<div class="main-block">
+  <section class="carousel-section">
+    <div class="carousel">
+      <button id="prevButton" class="carousel-button" aria-label="Предыдущее изображение">&#10094;</button>
+      <div class="carousel-inner">
+        <!-- Слайды будут добавлены здесь динамически -->
+      </div>
+      <button id="nextButton" class="carousel-button" aria-label="Следующее изображение">&#10095;</button>
+    </div>
+    <button id="addImageButton" class="add-receipt" aria-label="Добавить новое изображение">Добавить изображение</button>
+    <input type="file" id="fileInput" style="display:none" accept="image/*">
+  </section>
+</div>
+
+<!-- Модальное окно для изображения -->
+<div id="imageModal" class="modal">
+  <span class="close" onclick="closeImageModal()">&times;</span>
+  <img class="modal-content" id="modalImage">
+</div>
+
+<script src="js/receipt.js"></script>
+
+</body>
+</html>

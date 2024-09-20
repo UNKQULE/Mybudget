@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+:root {
+    --primary-color: #f44336; /* Красный цвет для расходов */
+    --background-color: #f4f4f4;
+    --text-color: #333;
+    --header-background: #000100;
+    --header-text-color: white;
+    --font-family: 'Poppins', Arial, sans-serif;
+    --font-size: 18px;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-family), serif;
+    background-color: var(--background-color);
+    margin: 0;
+    padding: 0;
+    font-size: var(--font-size);
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Размещаем элементы по краям */
+    background-color: var(--header-background);
+    color: var(--header-text-color);
+    padding: 20px;
+}
+
+.header-title {
+    margin: 0;
+    font-size: 1.5em;
+    flex-grow: 1; /* Заголовок занимает оставшееся пространство */
+    text-align: center; /* Центрируем текст заголовка */
+}
+
+.logo img {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.center-block {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #000;
+    color: #fff;
+    border-radius: 8px;
+}
+
+.history-list {
+    list-style: none;
+    padding: 0;
+}
+
+.history-item {
+    border-bottom: 1px solid #333;
+    padding: 10px 0;
+}

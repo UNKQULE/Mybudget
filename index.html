@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+
+<header>
+    <a href="index.html" class="logo">
+        <img src="image/logo.png" alt="mybudgetlogo">
+    </a>
+    <h1 class="header-title">Мой Бюджет</h1>
+    <button class="drawer-toggle" aria-label="Открыть меню">☰</button>
+</header>
+
+<div class="drawer">
+    <button class="auth-button">Авторизация</button>
+</div>
+
+<!-- Модальное окно для авторизации -->
+<div id="authModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Авторизация</h2>
+        <form id="loginForm">
+            <div class="form-group">
+                <label for="username">Имя пользователя:</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Пароль:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <div class="form-group">
+                <button type="submit" class="submit-button">Войти</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<!-- Модальное окно для изменения баланса -->
+<div id="balanceModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Изменить Баланс</h2>
+        <form id="balanceForm">
+            <div class="form-group">
+                <label for="new-balance">Новый Баланс:</label>
+                <input type="number" id="new-balance" name="new-balance" required>
+            </div>
+            <div class="form-group">
+                <button type="submit" class="submit-button">Сохранить</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<!-- Модальное окно для изменения бюджета -->
+<div id="budgetModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Изменить Бюджет</h2>
+        <form id="budgetForm">
+            <div class="form-group">
+                <label for="new-budget">Новый Бюджет:</label>
+                <input type="number" id="new-budget" name="new-budget" required>
+            </div>
+            <div class="form-group">
+                <button type="submit" class="submit-button">Сохранить</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<main>
+    <nav class="financial-panel">
+        <div class="financial-item">
+            <span class="financial-title">Баланс:</span>
+            <span id="balance-value">0 ₽</span>
+            <button class="edit-button" onclick="openBalanceModal()">Изменить</button>
+        </div>
+        <div class="financial-item">
+            <span class="financial-title">Бюджет:</span>
+            <span id="budget-value">0 ₽</span>
+            <button class="edit-button" onclick="openBudgetModal()">Изменить</button>
+        </div>
+        <div class="financial-item">
+            <span class="financial-title">Доходы:</span>
+            <span id="income-value">0 ₽</span>
+        </div>
+        <div class="financial-item">
+            <span class="financial-title">Расходы:</span>
+            <span id="expenses-value">0 ₽</span>
+        </div>
+    </nav>
+
+    <section class="controls-section">
+        <button id="add-income" class="transaction-button" onclick="window.location.href='add-income.html';">+</button>
+        <button id="add-expense" class="transaction-button" onclick="window.location.href='add-expense.html';">-</button>
+        <button id="monthly-report" class="report-button" onclick="window.location.href='receipt.html';">Чеки</button>
+    </section>
+
+    <section class="history-section">
+        <button class="history-button" id="income-history" onclick="window.location.href='income-history.html';">
+            <div class="history-title">История доходов</div>
+            <div class="financial-history-list" id="income-list">
+                <!-- Здесь будут отображаться доходы -->
+            </div>
+        </button>
+        <button class="history-button" id="expenses-history" onclick="window.location.href='expenses-history.html';">
+            <div class="history-title">История расходов</div>
+            <div class="financial-history-list" id="expenses-list">
+                <!-- Здесь будут отображаться расходы -->
+            </div>
+        </button>
+    </section>
+</main>
+
+<script src="js/index.js"></script>
+</body>
+</html>

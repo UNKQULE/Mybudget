@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>История доходов</title>
+  <link rel="stylesheet" href="css/income-history.css">
+  <style>
+    .center-block {
+      max-width: 600px;
+      margin: 20px auto;
+      padding: 20px;
+      background-color: #000;
+      color: #fff;
+      border-radius: 8px;
+    }
+    .history-list {
+      list-style: none;
+      padding: 0;
+    }
+    .history-item {
+      border-bottom: 1px solid #333;
+      padding: 10px 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .delete-income {
+      background: red;
+      color: white;
+      border: none;
+      cursor: pointer;
+      padding: 0.2rem 0.5rem;
+      border-radius: 3px;
+    }
+    .delete-income:hover {
+      background: darkred;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <a href="index.html" class="logo">
+    <img src="image/logo.png" alt="Логотип Мой Бюджет">
+  </a>
+  <h1 class="header-title">История доходов</h1>
+</header>
+
+<div class="center-block">
+  <ul class="history-list">
+    <!-- Здесь будет динамически генерироваться список доходов -->
+  </ul>
+</div>
+
+<script src="js/income-history.js"></script>
+
+</body>
+</html>
